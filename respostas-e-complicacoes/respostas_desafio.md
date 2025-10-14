@@ -4,7 +4,7 @@
 
 **R: A loja de São Paulo teve o maior faturamento total no período analisado.**
 
-Cheguei a esse resultado analisando o visual **"Total de Vendas por Loja"** (Gráfico de Colunas) e o **Treemap**. Ambos os visuais, construídos a partir da tabela consolidada de Fato de Vendas (Vendas x Preço do Produto), mostram a loja de São Paulo no topo do ranking de receita.
+Chegamos a esse resultado analisando o visual **"Total de Vendas por Loja"** (Gráfico de Colunas) e o **Treemap**. Ambos os visuais, construídos a partir da tabela consolidada de Fato de Vendas (Vendas x Preço do Produto), mostram a loja de São Paulo no topo do ranking de receita.
 
 * **Faturamento Total (Dados de 2018):** R$ 2.193.300,00
 * **Loja Vencedora:** São Paulo
@@ -13,19 +13,19 @@ Cheguei a esse resultado analisando o visual **"Total de Vendas por Loja"** (Gr�
 
 **R: Não é possível afirmar que houve queda constante nas vendas ao longo dos anos para qualquer cidade, e o Gráfico de Linha não é o visual ideal para mostrar este dado devido à fragmentação.**
 
-A base de dados possui uma grande concentração de registros em 2018 (tabela `fVendas`) e dados esparsos e pontuais em anos anteriores (CSVs de cidade). O **Gráfico de Dispersão** (que usamos como substituto do Gráfico de Linha) mostra apenas picos de vendas isolados em 2014, 2015, 2016 e 2017 para as cidades dos CSVs (Curitiba, Salvador, etc.). Não há dados contínuos suficientes para traçar uma linha de tendência ou determinar uma "queda constante".
+A base de dados possui uma grande concentração de registros em 2018 (tabela `fVendas`) e dados esparsos e pontuais em anos anteriores (CSVs de cidade). Não há dados contínuos suficientes para traçar uma linha de tendência ou determinar uma "queda constante".
 
 #### 3. 🎯 Qual produto foi o mais vendido em quantidade ao longo de todo o histórico de vendas? Como comparar entre categorias?
 
-**R: O produto 'Vestido' (ID 12) foi o mais vendido em quantidade.**
+**R: O produto 'Vestido' foi o mais vendido em quantidade.**
 
-Utilizei o visual de **Gráfico de Colunas/Barras**, configurado para usar a medida `Total Produtos Vendidos` (SUM de Quantidade Vendida) no eixo de valores e a coluna `Produto` (tabela `dProdutos`) no eixo de categorias. Para comparar, basta selecionar outras categorias de produtos no filtro ou adicionar outra dimensão, como `idLoja`, ao visual.
+Utilizamos o visual de **Gráfico de Colunas/Barras**, configurado para usar a medida `Total Produtos Vendidos` (SUM de Quantidade Vendida) no eixo de valores e a coluna `Produto` (tabela `dProdutos`) no eixo de categorias. Para comparar, basta selecionar outras categorias de produtos no filtro ou adicionar outra dimensão, como `idLoja`, ao visual.
 
 * **Produto mais vendido (Quantidade - Base `fVendas`):** Vestido (Total: 9.948 unidades)
 
 #### 4. 💵 Qual vendedor realizou a maior quantidade de vendas? E qual teve o maior valor faturado? Mude os filtros e mostre!
 
-**R: Os vendedores Tayna Felipi (ID 15) e Patricia Coimbra (ID 14) foram os líderes em suas respectivas categorias na base principal.**
+**R: Os vendedores Tayna Felipi e Patricia Coimbra foram os líderes em suas respectivas categorias na base principal.**
 
 A análise se restringiu à base principal (`fVendas`) por falta de `idVendedor` nos CSVs das cidades.
 
